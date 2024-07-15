@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mes débuts avec la Programmation Web</title>
+  </head>
+  <body
+    background="./photo_2024-05-19_14-25-05.jpg"
+    style="background-color: gray"
+  >
+    <h1 style="color: yellow; text-align: center">les section de page</h1>
+    <ol type="I" style="color: yellowgreen">
+      <li>
+        <a href="#s1" style="color: yellowgreen"
+          >Informations Personnelles du Candidat</a
+        >
+      </li>
+      <br />
+      <li><a href="#s2" style="color: yellowgreen">Cursus de l'étudiant</a></li>
+      <br />
+      <li>
+        <a href="#s3" style="color: yellowgreen"
+          >Langages de Programmation maîtrisés</a
+        >
+      </li>
+      <br />
+      <li>
+        <a href="#s4" style="color: yellowgreen"> Exercice : Programme en C</a>
+      </li>
+      <br />
+      <a href="#s5"></a>
+    </ol>
+    <hr size="4cm" />
+    <section id="s1" style="color: rgb(0, 255, 247)">
+      <h1 style="color: yellow; text-align: center">
+        Informations Personnelles du Candidat
+      </h1>
+      <p>
+        <b>Nom</b> : ELKEFIF<br />
+        <b>Prénom</b> : ZAHREDDINE<br />
+        <b>Date de naissance</b> : 06 OCTOBRE 2003<br />
+        <b>Adresse</b> : city 56<br />
+        <b>Adresse email</b> :
+        <a style="color: beige" href="mailto:zahrouelkefif@gmail.com"
+          >zahrouelkefif@gmail.com</a
+        ><br />
+        <b>Num Telephone</b> : 07933333333333<br />
+        <b>Situation Familiale</b> : Célibataire
+      </p>
+    </section>
+    <hr />
+    <section id="s2" style="color: beige">
+      <h1 style="color: yellow; text-align: center">Cursus de l'étudiant</h1>
+      <ol type="1">
+        <li><i>Cycle Primaire</i></li>
+        <ul>
+          <li><b>Ecole</b> : HIGHER INSTITUTE OF SCIENCE</li>
+          <li><b>Année de première inscription</b> : 2022</li>
+        </ul>
+        <li><i>Cycle Moyen</i></li>
+        <ul type="square">
+          <li><b>CEM</b> : Nom_établissement</li>
+          <li><b>Année de première inscription</b> : AAAA</li>
+        </ul>
+        <li><i>Cycle Secondaire</i></li>
+        <ul type="square">
+          <li><b>Lycée</b> : tiqniquom</li>
+          <li><b>Année de première inscription</b> : AAAA</li>
+          <li><b>Bac</b> : Sciences</li>
+        </ul>
+        <li><i>Cycle Universitaire</i></li>
+        <ul type="square">
+          <li><b>Université</b> : higher institute of science</li>
+          <li><b>Année de première inscription</b> : 2022</li>
+        </ul>
+      </ol>
+    </section>
+    <hr />
+    <section id="s3" style="color: aqua">
+      <h1 style="color: yellow; text-align: center">
+        Langages de Programmation maîtrisés
+      </h1>
+      <ul type="circle">
+        <li>C</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+      </ul>
+      <hr />
+    </section>
+
+    <section id="s4" style="color: aqua">
+      <h1 style="color: yellow; text-align: center">
+        Exercice : Programme en C
+      </h1>
+
+      <h2>Code C pour remplir et sommer une matrice</h2>
+      <pre><code>#include &lt;stdio.h&gt;
+
+#define MAX_ROWS  3
+#define MAX_COLS  3
+
+// Fonction pour remplir la matrice
+void remplirMatrice(int mat[MAX_ROWS][MAX_COLS]) {
+  printf("Entrez les éléments de la matrice (%dx%d) :\n", MAX_ROWS, MAX_COLS);
+  for (int i = 0; i < MAX_ROWS; i++) {
+      for (int j = 0; j < MAX_COLS; j++) {
+          printf("Element [%d][%d] : ", i, j);
+          scanf("%d", &mat[i][j]);
+      }
+  }
+}
+
+// Fonction pour calculer la somme des éléments positifs
+int sommePositifs(int mat[MAX_ROWS][MAX_COLS]) {
+  int somme = 0;
+  for (int i = 0; i < MAX_ROWS; i++) {
+      for (int j = 0; j < MAX_COLS; j++) {
+          if (mat[i][j] > 0) {
+              somme += mat[i][j];
+          }
+      }
+  }
+  return somme;
+}
+
+int main() {
+  int matrice[MAX_ROWS][MAX_COLS];
+  remplirMatrice(matrice);
+
+  // Affichage de la matrice
+  printf("\nMatrice saisie :\n");
+  for (int i = 0; i < MAX_ROWS; i++) {
+      for (int j = 0; j < MAX_COLS; j++) {
+          printf("%d\t", matrice[i][j]);
+      }
+      printf("\n");
+  }
+
+  // Calcul et affichage de la somme des éléments positifs
+  int somme = sommePositifs(matrice);
+  printf("\nLa somme des éléments positifs de la matrice est : %d\n", somme);
+
+  return 0;
+}
+  </code></pre>
+    </section>
+  </body>
+</html>
