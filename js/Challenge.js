@@ -54,3 +54,5 @@ console.log(checkSeason(0));
 console.log(checkSeason(13));
 
 console.log("====================================");
+//   peek: Returns the top element of the stack without removing it.
+// isEmpty: Returns a boolean indicating whether the stack is empty.
