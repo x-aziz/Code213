@@ -116,3 +116,13 @@ const similaritiesArray = (array1, array2) => {
 console.log("====================================");
 console.log(similaritiesArray(array1, array2));
 console.log("====================================");
+const fibonacci = () => {
+  let fib = [0, 1];
+  while (fib[fib.length - 1] < 1000) {
+    fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
+  }
+  return fib;
+};
+console.log("====================================");
+console.log(fibonacci());
+console.log("====================================");
